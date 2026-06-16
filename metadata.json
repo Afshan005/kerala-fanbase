@@ -1,0 +1,6 @@
+{
+  "name": "Fans of Kerala",
+  "description": "Kerala's largest football fan census platform for FIFA World Cup 2026, featuring real-time rankings, district-wise analytics, and custom dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

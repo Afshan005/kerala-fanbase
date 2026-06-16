@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-50: #0a0a0c;
+  --color-slate-100: rgba(255, 255, 255, 0.03);
+  --color-slate-150: rgba(255, 255, 255, 0.06);
+  --color-slate-200: rgba(255, 255, 255, 0.12);
+  --color-slate-300: rgba(255, 255, 255, 0.20);
+  --color-slate-400: #71717a;
+  --color-slate-500: #a1a1aa;
+  --color-slate-550: #b4b4bb;
+  --color-slate-600: #ffffff;
+  --color-slate-650: #d4d4d8;
+  --color-slate-700: #e4e4e7;
+  --color-slate-800: #f4f4f5;
+  --color-slate-900: #ffffff;
+  
+  --color-white: rgba(20, 20, 22, 0.75);
+  
+  --color-blue-50: rgba(255, 255, 255, 0.03);
+  --color-blue-100: rgba(255, 255, 255, 0.07);
+  --color-blue-500: #ffffff;
+  --color-blue-600: #f4f4f5;
+  --color-blue-700: #18181b;
+  
+  --color-indigo-50: rgba(255, 255, 255, 0.03);
+  --color-indigo-500: #a1a1aa;
+  --color-indigo-600: #ffffff;
+  --color-indigo-700: #27272a;
+  
+  --color-emerald-500: #ffffff;
+  --color-emerald-600: #d4d4d8;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom glow animations and background visual elements */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+  }
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  }
+  .bg-stadium-glow {
+    background: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.06) 0%, rgba(10, 10, 12, 0) 65%);
+  }
+  .glass-card {
+    background: rgba(20, 20, 22, 0.65) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 
+      0 10px 30px -10px rgba(0, 0, 0, 0.8),
+      0 1px 1px 0 rgba(255, 255, 255, 0.02) inset;
+  }
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(30, 30, 32, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 
+      0 20px 40px -15px rgba(255, 255, 255, 0.05),
+      0 1px 1px 0 rgba(255, 255, 255, 0.04) inset;
+  }
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Force dark style selection rules for standard HTML controls */
+select option {
+  background-color: #0a0a0c !important;
+  color: #ffffff !important;
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
